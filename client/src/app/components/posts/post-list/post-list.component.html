@@ -1,0 +1,11 @@
+<ul class="list" *ngIf="!postService.isLoading">
+  <li class="post" *ngFor="let post of postService.posts">
+    <h3 class="post-author">{{post.author}}</h3>
+    <img class="post-image" [src]="post.postImage" alt="{{post.description}}"/>
+    <section class="post-details">
+      <p class="post-details-desc">{{post.description}}</p>
+      <span class="post-details-date">{{post.createdAt}}</span>
+    </section>
+  </li>
+</ul>
+<app-loading-spinner *ngIf="postService.isLoading"></app-loading-spinner>

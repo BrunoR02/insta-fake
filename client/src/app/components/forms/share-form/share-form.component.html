@@ -1,0 +1,24 @@
+<form class="form" (ngSubmit)="submit($event)" [formGroup]="shareForm" #formDir="ngForm">
+  <div class="form-control">
+    <label class="form-label">
+      Author
+      <input class="form-input" type="text" formControlName="author" placeholder="Insire the author"/>
+      <span class="form-input-error" *ngIf="author.invalid && formDir.submitted">Author name is required.</span>
+    </label>
+  </div>
+  <div class="form-control">
+    <label class="form-label">
+      Description
+      <textarea class="form-input" formControlName="description" placeholder="Insire the description"></textarea>
+    </label>
+  </div>
+  <div class="form-upload">
+    <label class="form-upload-label">
+      Upload Image
+      <input type="file" (change)="onFileChanged($event)" accept="image/png, image/jpeg, image/bmep" hidden/>
+    </label>
+    <span *ngIf="filename" class="form-upload-name">{{filename}}</span>
+  </div>
+  <img *ngIf="previewImage.length > 0" class="form-upload-preview" [src]="previewImage"/>
+  <button class="form-submit" type="submit">Share</button>
+</form>

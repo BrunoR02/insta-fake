@@ -1,0 +1,72 @@
+.form
+  display: flex
+  flex-direction: column
+  max-width: 500px
+  margin: 0 auto
+  &-label
+    display: flex
+    flex-direction: column
+    padding: 10px 0
+    font-size: 1em
+    font-weight: 600
+    color: #FEC402
+  &-input
+    margin: 10px 0 
+    padding: 10px
+    border: 2px solid #222
+    outline: none
+    &:focus
+      border-color: #FEC402
+      box-shadow: 0 0 5px #FEC402
+  &-input-error
+    font:
+      size: 0.8em
+      weight: 500
+    color: red
+  textarea
+    min-height: 100px
+    resize: none
+  &-upload
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 10px
+    &-label
+      display: table
+      padding: 10px
+      font-weight: 600
+      color: #FEC402
+      border: 2px solid #FEC402
+      cursor: pointer
+      &:hover
+        color: #fff
+        background-color: #FEC402
+    &-name
+      max-width: 200px
+      color: #FEC402
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    &-preview
+      align-self: center
+      width: 400px
+      margin: 10px
+      border: 2px solid #222
+  &-submit
+    margin: 20px auto
+    padding: 10px 50px
+    font:
+      size: 1em
+      weight: 300
+    color: #fff
+    background-color: #FEC402
+    border: none
+    cursor: pointer
+    &:hover
+      box-shadow: 0 0 5px #999
+    &:disabled
+      color: #666
+      background-color: #999
+
+
+  

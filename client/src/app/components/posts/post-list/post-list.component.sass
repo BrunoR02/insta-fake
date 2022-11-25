@@ -1,0 +1,40 @@
+.list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  max-width: 1000px
+  margin: 0 auto
+  
+.post
+  width: 30%
+  margin: 10px
+  color: #222
+  background-color: #eee
+  box-shadow: 0 1px 5px #222
+  overflow: hidden
+  transition: 0.3s ease
+  cursor: pointer
+  &:hover
+    color: #fff
+    background-color: #FEC402
+    box-shadow: 0 3px 10px #222
+  &-author
+    padding: 10px
+  &-image
+    width: 100%
+    height: 300px
+    object:
+      position: 50% 50%
+      fit: cover
+    background-color: #fff
+  &-details
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 10px
+    &-desc
+      font-size: 1em
+    &-date
+      align-self: flex-end
+      padding-top: 10px
+      font-size: 0.9em
